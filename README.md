@@ -2,7 +2,7 @@
 Official Repository for "MonoWAD: Weather-Adaptive Diffusion Model for Robust Monocular 3D Object Detection".
 
 <p align="center">
-  <img alt="img-name" src="[https://user-images.githubusercontent.com/14089338/232197965-8936504d-8ce4-450b-a281-069f5c2c8205.gif](https://github.com/VisualAIKHU/MonoWAD/assets/132932095/daca37e0-3a15-4bd5-9ddf-97256b196f7a)" width="900">
+  <img alt="img-name" src="https://github.com/VisualAIKHU/MonoWAD/assets/132932095/16871ca9-b57c-454f-895c-8d44bd835de1" width="900">
 </p>
 
 ## Data Preparation
