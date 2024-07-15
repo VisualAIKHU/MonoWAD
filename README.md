@@ -11,7 +11,7 @@ Please download the official [KITTI dataset](http://www.cvlibs.net/datasets/kitt
 You can also download our Foggy KITTI dataset with different fog densities.
 
 **Foggy KITTI dataset:**
-* [Foggy 0.1](https://drive.google.com/file/d/1iOpoZ-QbJdU2ytRmd9wPxH0RNjZ6KNdQ/view?usp=drive_link)
+* [Foggy 0.1](https://drive.google.com/file/d/1iOpoZ-QbJdU2ytRmd9wPxH0RNjZ6KNdQ/view?usp=drive_link)(The main paper uses 0.1)
 * [Foggy 0.05](https://drive.google.com/file/d/1BfWvrMqYkSA_8edxX3IfiM0Nog1w_p7w/view?usp=sharing)
 * [Foggy 0.15](https://drive.google.com/file/d/1J37b12IpckWu38K8NSY-1yc8KD8h5F-R/view?usp=sharing)
 * [Foggy 0.30](https://drive.google.com/file/d/1_fVHEssaCX58wE4fHh3fzexzBhrD4Zux/view?usp=sharing)
