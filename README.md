@@ -16,3 +16,7 @@ You can also download our Foggy KITTI dataset with different fog densities.
 * [Foggy 0.15](https://drive.google.com/file/d/1J37b12IpckWu38K8NSY-1yc8KD8h5F-R/view?usp=sharing)
 * [Foggy 0.30](https://drive.google.com/file/d/1_fVHEssaCX58wE4fHh3fzexzBhrD4Zux/view?usp=sharing)
 * [Foggy test](https://drive.google.com/file/d/1H5jQrueWlqfQy52ihsgxTySxxljM_4br/view?usp=sharing)
+
+## Acknowlegment
+
+Our codes benefits from the excellent [visualDet3D](https://github.com/Owen-Liuyuxuan/visualDet3D), [MonoDTR](https://github.com/KuanchihHuang/MonoDTR).
