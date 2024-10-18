@@ -30,4 +30,5 @@ If you use MonoWAD, please consider citing:
 
 ## Acknowlegment
 
-Our codes benefits from the excellent [visualDet3D](https://github.com/Owen-Liuyuxuan/visualDet3D), [MonoDTR](https://github.com/KuanchihHuang/MonoDTR).
+Our codes benefits from the excellent [visualDet3D](https://github.com/Owen-Liuyuxuan/visualDet3D), [MonoDTR](https://github.com/KuanchihHuang/MonoDTR), [denoising-diffusion-pytorch
+](https://github.com/lucidrains/denoising-diffusion-pytorch).
