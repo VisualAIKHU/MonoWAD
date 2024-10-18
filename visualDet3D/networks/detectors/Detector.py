@@ -32,7 +32,7 @@ class MonoWAD_3D(nn.Module):
 
     def train_forward(self, left_images, annotations, P2, depth_gt=None, foggy_images=None):
         
-        features, depth, diff_loss = self.mono_core(dict(image=left_images, P2=P2, foggy=foggy_images, training=True))
+        features, depth, l_proposed = self.mono_core(dict(image=left_images, P2=P2, foggy=foggy_images, training=True))
         
         depth_output = depth
 
@@ -61,8 +61,8 @@ class MonoWAD_3D(nn.Module):
         else:
             loss_dict['depth_loss'] = torch.zeros_like(reg_loss)
             
-        loss_dict['diff_loss'] = diff_loss
-        return cls_loss, reg_loss, diff_loss, loss_dict
+        loss_dict['proposed_loss'] = l_proposed
+        return cls_loss, reg_loss, l_proposed, loss_dict
 
     def test_forward(self, left_images, P2, foggy_images=None, eval_weather_type:str="clear"):
         assert left_images.shape[0] == 1 # we recommmend image batch size = 1 for testing

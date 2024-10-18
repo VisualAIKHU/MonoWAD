@@ -30,7 +30,7 @@ def train_mono_detection(data, module:nn.Module,
     annotation = compound_annotation(labels, max_length, bbox2d, bbox_3d, cfg.obj_types) #np.arraym, [batch, max_length, 4 + 1 + 7]
 
     # Feed to the network
-    classification_loss, regression_loss, diffusion_loss ,loss_dict = module(
+    classification_loss, regression_loss, l_proposed ,loss_dict = module(
             [images.cuda().float().contiguous(), 
              images.new(annotation).cuda(),
              P2.cuda(),
@@ -47,7 +47,7 @@ def train_mono_detection(data, module:nn.Module,
     del loss_dict
 
     if not optimizer is None:
-        loss = classification_loss + regression_loss + diffusion_loss
+        loss = classification_loss + regression_loss + l_proposed
 
     if bool(loss == 0):
         del loss, loss_dict

@@ -78,9 +78,9 @@ class MonoWAD(nn.Module):
         if training:
             foggy_feat = self.backbone(x['foggy'])
             foggy_feat = self.neck(foggy_feat[self.first_level:])
-            weather_reference_feat, codebook_loss = self.codebook(origin_feat, foggy_feat)
-            diff_loss, x = self.weather_adaptive_diffusion(origin_feat, foggy_feat, weather_reference_feat)
-            diff_loss = diff_loss + codebook_loss
+            weather_reference_feat, l_ckr = self.codebook(origin_feat, foggy_feat)
+            l_wae, x = self.weather_adaptive_diffusion(origin_feat, foggy_feat, weather_reference_feat)
+            l_proposed = l_wae + l_ckr
         else:
             weather_reference_feat = self.codebook(origin_feat)
             x = self.weather_adaptive_diffusion(origin_feat, codebook=weather_reference_feat)
@@ -99,6 +99,6 @@ class MonoWAD(nn.Module):
         feat = self.dtr(depth_feat, img_feat, depth_emb)
         feat = feat.permute(0, 2, 1).view(N,C,H,W)
         if training:
-            return feat, depth, diff_loss
+            return feat, depth, l_proposed
         else:
             return feat, depth
