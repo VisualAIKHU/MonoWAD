@@ -1,0 +1,11 @@
+matplotlib
+numba
+fire
+einops
+scikit-image
+opencv-python
+easydict
+tqdm
+easydict
+tensorboard==2.15.1
+numpy==1.26.4

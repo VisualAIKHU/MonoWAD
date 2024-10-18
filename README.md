@@ -10,7 +10,7 @@ Official Repository for "MonoWAD: Weather-Adaptive Diffusion Model for Robust Mo
 </div>
 
 ## Installation
-**Create MonoWAD environment**
+**Create MonoWAD environment:**
 ```
 git clone https://github.com/VisualAIKHU/MonoWAD.git
 cd MonoWAD
@@ -19,10 +19,14 @@ conda create -n monowad python=3.10
 conda activate monowad
 ```
 
-**Install pytorch**
+**Install pytorch and requirements & build:**
 ```
 # We adopt torch 2.0.1
 pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2
+
+pip install -r requirements.txt
+
+./make.sh
 ```
 
 ## Data Preparation
@@ -52,6 +56,26 @@ You can also download our Foggy KITTI dataset with different fog densities.
         |testing/
           |calib/
           |image_2/ 
+```
+
+**Data preprocessing:**
+```
+./launchers/det_precompute.sh config/config.py train
+python scripts/depth_gt_compute.py --config=config/config.py
+```
+
+## Training
+You can modify the settings of models and training in configs/config.py
+```
+# You can modify the GPU_DEVICE (0 is default).
+./train.sh 0 MonoWAD_train_val
+```
+
+## Evaluation
+We provide pre-trained [models](https://drive.google.com/file/d/1jmDZO56G-g3DcgFK7ntfJPiwF2JNvZV-/view?usp=sharing) and place it in './workdirs/MonoWAD/checkpoint/'
+```
+# .sh GPU_DEVICE | WEIGHT_NAME | TEST_WEATHER (0 | MonoWAD_3D_latest | clear is default).
+./test.sh 0 latest clear
 ```
 
 ## Citation
