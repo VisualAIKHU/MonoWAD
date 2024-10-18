@@ -21,11 +21,11 @@ You can also download our Foggy KITTI dataset with different fog densities.
 If you use MonoWAD, please consider citing:
 
     @article{oh2024monowad,
-    title={MonoWAD: Weather-Adaptive Diffusion Model for Robust Monocular 3D Object Detection},
-    author={Oh, Youngmin and Kim, Hyung-Il and Kim, Seong Tae and Kim, Jung Uk},
-    journal={arXiv preprint arXiv:2407.16448},
-    year={2024}
-  }
+      title={MonoWAD: Weather-Adaptive Diffusion Model for Robust Monocular 3D Object Detection},
+      author={Oh, Youngmin and Kim, Hyung-Il and Kim, Seong Tae and Kim, Jung Uk},
+      journal={arXiv preprint arXiv:2407.16448},
+      year={2024}
+    }
 ---
 
 ## Acknowlegment
