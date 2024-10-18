@@ -26,6 +26,7 @@ If you use MonoWAD, please consider citing:
     journal={arXiv preprint arXiv:2407.16448},
     year={2024}
   }
+---
 
 ## Acknowlegment
 
